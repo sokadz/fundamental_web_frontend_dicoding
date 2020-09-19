@@ -37,7 +37,7 @@ const main = () => {
     const mealListElement = document.querySelector("meal-lists");
 
     const onButtonSearchClicked = () => {
-        DataSource.searchMeal(searchElement.value)
+        DataSource.searchMeals(searchElement.value)
             .then(renderResult)
             .catch(fallbackResult)
     };
