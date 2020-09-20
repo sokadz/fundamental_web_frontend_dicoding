@@ -37,13 +37,13 @@ const main = () => {
     const mealListElement = document.querySelector("meal-lists");
 
     const onButtonSearchClicked = () => {
-        DataSource.searchMeals(searchElement.value)
+        DataSource.searchMeal(searchElement.value)
             .then(renderResult)
             .catch(fallbackResult)
     };
 
     const renderResult = results => {
-        mealListElement.meals = results;
+        mealListElement.meal = results;
     };
 
     const fallbackResult = message => {

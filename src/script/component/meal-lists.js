@@ -7,8 +7,8 @@ class MealList extends HTMLElement {
         this.shadowDOM = this.attachShadow({ mode: "open" });
     }
 
-    set meals(meals) {
-        this._meals = meals;
+    set meal(meal) {
+        this._meal= meal;
         this.render();
     }
 
@@ -30,7 +30,7 @@ class MealList extends HTMLElement {
 
     render() {
         this.shadowDOM.innerHTML = "";
-        this._meals.forEach(meals => {
+        this._meal.forEach(meal => {
             const mealItemElement = document.createElement("meal-item");
             mealItemElement.meal = meal
             this.shadowDOM.appendChild(mealItemElement);

@@ -5,8 +5,8 @@ class MealItem extends HTMLElement {
         this.shadowDOM = this.attachShadow({ mode: "open" });
     }
 
-    set meals(meals) {
-        this._meals = meals;
+    set meal(meal) {
+        this._meal = meal;
         this.render();
     }
 
@@ -51,10 +51,10 @@ class MealItem extends HTMLElement {
                     -webkit-line-clamp: 10; /* number of lines to show */
                 }
             </style>
-            <img class="fan-art-meal" src="${this._meals.strMealThumb}" alt="Fan Art">
+            <img class="fan-art-meal" src="${this._meal.strMealThumb}" alt="Fan Art">
             <div class="meal-info">
-                <h2>${this._meals.strMeal}</h2>
-                <p>${this._meals.strInstructions}</p>
+                <h2>${this._meal.strMeal}</h2>
+                <p>${this._meal.strInstructions}</p>
             </div>`;
     }
 }
